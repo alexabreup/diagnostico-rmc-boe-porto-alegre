@@ -8,6 +8,13 @@ console.log('🔧 Fixing status validation errors...\n');
 
 // Find all markdown files in docs directory
 const docsDir = path.join(__dirname, '..', 'docs');
+
+// Check if docs directory exists
+if (!fs.existsSync(docsDir)) {
+  console.log('📁 Docs directory not found, skipping fixes...');
+  process.exit(0);
+}
+
 const markdownFiles = glob.sync('**/*.md', { cwd: docsDir });
 
 let totalFiles = 0;

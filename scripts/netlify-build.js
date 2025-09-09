@@ -11,7 +11,7 @@ try {
   process.env.NODE_ENV = 'production';
   
   console.log('📦 Installing dependencies...');
-  execSync('npm ci', { stdio: 'inherit' });
+  execSync('npm ci --include=dev', { stdio: 'inherit' });
   
   console.log('\n🔧 Running content fixes...');
   execSync('node scripts/fix-status-validation.js', { stdio: 'inherit' });
