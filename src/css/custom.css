@@ -873,6 +873,22 @@ code {
   contain: layout style paint;
 }
 
+/* Hide skip to content link */
+.skipToContent_fXgn,
+[class*="skipToContent"] {
+  display: none !important;
+}
+
+/* Hide theme toggle completely since we're forcing light mode */
+.toggle_vylO,
+[class*="toggle"],
+.toggleButton_gllP,
+[class*="toggleButton"],
+.colorModeToggle_DEke,
+[class*="colorModeToggle"] {
+  display: none !important;
+}
+
 /* Print styles */
 @media print {
   .navbar,
