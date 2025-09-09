@@ -1,3 +1,12 @@
+---
+title: Introdução Alternativa
+author: Alexandre de Abreu Pereira
+author_email: alexandre.pereira@eletromidia.com.br
+department: Hardware Department - Eletromidia
+date: 2025-01-09
+sidebar_position: 2
+---
+
 # Introdução
 
 ## Contexto Operacional

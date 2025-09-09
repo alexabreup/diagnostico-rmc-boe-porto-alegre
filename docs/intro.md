@@ -48,7 +48,8 @@ Falhas no sistema de schedule de brilho em placas RMC, resultando em:
 
 - Telas com PWM fixo em 0% (apagadas)
 - Schedule de horários não funcional
-- Horários zerados (00:00) na configuração </DiagnosticCard>
+- Horários zerados (00:00) na configuração
+</DiagnosticCard>
 
 ## Metodologia de Análise
 
@@ -83,7 +84,8 @@ Falhas no sistema de schedule de brilho em placas RMC, resultando em:
 
 - Perda da implementação de horário de verão (SUMMER_TIME)
 - Ausência de funções de conversão de tempo Unix
-- Schedule PWM não funcional </DiagnosticCard>
+- Schedule PWM não funcional
+</DiagnosticCard>
 
 ### Solução Validada
 

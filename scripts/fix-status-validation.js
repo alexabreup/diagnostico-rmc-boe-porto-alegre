@@ -25,17 +25,34 @@ markdownFiles.forEach(file => {
   let content = fs.readFileSync(filePath, 'utf8');
   let hasChanges = false;
   
-  // Fix invalid status classifications
+  // Fix invalid status classifications - more comprehensive patterns
   const statusFixes = [
+    // Common invalid status values
     { from: /status="count"/g, to: 'status="funcional"' },
+    { from: /status='count'/g, to: 'status="funcional"' },
     { from: /status="cr"/g, to: 'status="crítico"' },
+    { from: /status='cr'/g, to: 'status="crítico"' },
     { from: /status="passed"/g, to: 'status="funcional"' },
+    { from: /status='passed'/g, to: 'status="funcional"' },
     { from: /status="failed"/g, to: 'status="crítico"' },
+    { from: /status='failed'/g, to: 'status="crítico"' },
     { from: /status="warning"/g, to: 'status="degradado"' },
+    { from: /status='warning'/g, to: 'status="degradado"' },
     { from: /status="error"/g, to: 'status="crítico"' },
+    { from: /status='error'/g, to: 'status="crítico"' },
     { from: /status="success"/g, to: 'status="funcional"' },
+    { from: /status='success'/g, to: 'status="funcional"' },
     { from: /status="info"/g, to: 'status="funcional"' },
-    { from: /status="danger"/g, to: 'status="crítico"' }
+    { from: /status='info'/g, to: 'status="funcional"' },
+    { from: /status="danger"/g, to: 'status="crítico"' },
+    { from: /status='danger'/g, to: 'status="crítico"' },
+    // Additional patterns
+    { from: /status="ok"/g, to: 'status="funcional"' },
+    { from: /status='ok'/g, to: 'status="funcional"' },
+    { from: /status="good"/g, to: 'status="funcional"' },
+    { from: /status='good'/g, to: 'status="funcional"' },
+    { from: /status="bad"/g, to: 'status="crítico"' },
+    { from: /status='bad'/g, to: 'status="crítico"' }
   ];
   
   statusFixes.forEach(fix => {

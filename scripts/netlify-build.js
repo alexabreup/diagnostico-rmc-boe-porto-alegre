@@ -6,9 +6,10 @@ const path = require('path');
 console.log('🚀 Starting Netlify build process...\n');
 
 try {
-  // Set environment variable to allow warnings
+  // Set environment variables to allow warnings and disable strict validation
   process.env.VALIDATION_STRICT = 'false';
   process.env.NODE_ENV = 'production';
+  process.env.SUPPRESS_WARNINGS = 'true';
   
   console.log('📦 Installing dependencies...');
   execSync('npm ci --include=dev', { stdio: 'inherit' });
