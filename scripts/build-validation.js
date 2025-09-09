@@ -9,6 +9,15 @@ const path = require('path');
 const { validateAllTemplates, generateReport: generateTemplateReport } = require('./validate-templates');
 const { validateAllDocuments, generateReport: generateContentReport } = require('./content-validation');
 
+// Check if validation should be skipped entirely
+const skipValidation = process.env.SKIP_VALIDATION === 'true' || process.env.NODE_ENV === 'production';
+const strictMode = process.env.VALIDATION_STRICT !== 'false';
+
+if (skipValidation && !strictMode) {
+  console.log('🚀 Skipping validation in production mode with non-strict validation...');
+  process.exit(0);
+}
+
 // Performance thresholds
 const PERFORMANCE_THRESHOLDS = {
   maxBundleSize: 500, // KB

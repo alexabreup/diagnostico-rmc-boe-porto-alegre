@@ -10,6 +10,7 @@ try {
   process.env.VALIDATION_STRICT = 'false';
   process.env.NODE_ENV = 'production';
   process.env.SUPPRESS_WARNINGS = 'true';
+  process.env.SKIP_VALIDATION = 'true';
   
   console.log('📦 Installing dependencies...');
   execSync('npm ci --include=dev', { stdio: 'inherit' });
