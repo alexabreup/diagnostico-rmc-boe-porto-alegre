@@ -21,6 +21,31 @@ Este projeto documenta uma análise técnica abrangente das placas RMC (Remote M
 baseadas no microcontrolador **GD32F307VET6**. O objetivo principal foi identificar e resolver
 problemas relacionados ao sistema de schedule de brilho PWM que afetavam o controle das telas LCD.
 
+## Contexto Operacional
+
+A **Eletromidia**, empresa especializada em mídia externa digital, opera uma extensa rede de mobiliários urbanos digitais (MUBs) equipados com telões de display LCD na cidade de Porto Alegre, RS. Estes equipamentos utilizam placas RMC (Remote Media Controller) baseadas no microcontrolador **GD32F307VET6** para controle de brilho adaptativo, garantindo visibilidade otimizada e economia energética através de ajustes automáticos de PWM conforme horário e luminosidade ambiente.
+
+## Problema Relatado
+
+Em agosto de 2025, o líder operacional do departamento de operações de Porto Alegre, **Fernando Ceccato**, reportou falhas sistemáticas no programa de controle de schedule de brilho dos mobiliários urbanos digitais da cidade. Os sintomas identificados incluíam:
+
+- **Perda de controle de PWM**: Telas permanecendo com brilho fixo em 0% (apagadas)
+- **Schedule não funcional**: Horários de programação zerados (00:00)
+- **Ausência de resposta**: MCUs não registrando comandos de configuração
+
+## Processo de Diagnóstico Inicial
+
+### Treinamento Remoto
+Nossa equipe de São Paulo implementou inicialmente uma abordagem de suporte remoto, utilizando o **Treinamento do Departamento de Projetos** disponível em https://intercomelt.netlify.app/ para capacitar a equipe local de Porto Alegre. Durante as sessões remotas foram demonstrados:
+
+- Procedimentos de atualização de firmware
+- Instalação de scripts de controle de brilho
+- Configuração de agendamentos (schedules)
+- Protocolos de diagnóstico básico
+
+### Confirmação do Problema
+Mesmo após o treinamento especializado e implementação dos procedimentos corretos, a equipe de Porto Alegre confirmou a **ineficiência persistente** dos MCUs das placas RMC, evidenciando que o problema não estava relacionado a procedimentos operacionais, mas sim a questões técnicas de firmware.
+
 import TechnicalTable from '@site/src/components/TechnicalTable';
 import DiagnosticCard from '@site/src/components/DiagnosticCard';
 import MetricsDisplay from '@site/src/components/MetricsDisplay';
@@ -97,21 +122,20 @@ Atualização para firmware **ZGS126_Upgrade.bin V1.01** resolve 100% dos casos 
 
 ## Estrutura da Documentação
 
-Esta documentação está organizada nas seguintes seções:
+Esta documentação está organizada para fornecer:
 
-### Análises Individuais
+### Diagnósticos Individuais
 
-Diagnósticos detalhados de cada placa analisada, incluindo:
+Análise detalhada de cada uma das três placas recebidas de Porto Alegre, incluindo:
 
+- Estado do firmware e configurações de rede
+- Funcionalidade do schedule PWM
 - Informações de hardware
 - Análise de firmware
-- Estado do schedule PWM
-- Configuração de rede
 
-### Análises Comparativas
+### Análise Comparativa
 
-Estudos que comparam múltiplas placas para identificar padrões de degradação e validar
-soluções.
+Estudo comparativo entre firmwares desatualizados, atualizados e versão BOE padrão, identificando padrões de degradação e validando soluções.
 
 ### Diagnósticos Específicos
 
@@ -119,11 +143,15 @@ Análises focadas em problemas específicos, como controle de múltiplas telas L
 
 ### Procedimentos Técnicos
 
-Guias passo-a-passo para reprogramação e correção de placas.
+Protocolos passo-a-passo para correção e reprogramação das placas, aplicáveis pela equipe de campo.
 
 ### Relatórios Executivos
 
 Resumos executivos com conclusões, recomendações e planos de ação.
+
+### Recomendações Operacionais
+
+Diretrizes para implementação da solução em toda a rede de Porto Alegre e prevenção de recorrências.
 
 ## Impacto dos Resultados
 
@@ -136,6 +164,16 @@ Resumos executivos com conclusões, recomendações e planos de ação.
     { value: '+200%', label: 'Melhoria de confiabilidade', status: 'funcional' }
   ]} 
 />
+
+## Relevância Estratégica
+
+A resolução deste problema técnico impacta diretamente:
+- **Qualidade de exibição** dos conteúdos publicitários
+- **Eficiência energética** da rede de equipamentos
+- **Satisfação do cliente** com a performance dos MUBs
+- **Redução de chamados técnicos** e custos operacionais
+
+Este relatório documenta não apenas a solução técnica identificada, mas estabelece as bases para um protocolo preventivo que garanta a confiabilidade operacional da rede Eletromidia em Porto Alegre e demais praças.
 
 ## Próximos Passos
 
