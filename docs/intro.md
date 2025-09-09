@@ -29,6 +29,8 @@ import MetricsDisplay from '@site/src/components/MetricsDisplay';
 
 ### Hardware Analisado
 
+![Microcontrolador GD32F103C8T6](/img/gd32f103c8t6.png)
+
 <TechnicalTable 
   title="Especificações do Hardware" 
   headers={['Componente', 'Especificação', 'Status']} 
