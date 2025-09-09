@@ -12,6 +12,9 @@ try {
   process.env.SUPPRESS_WARNINGS = 'true';
   process.env.SKIP_VALIDATION = 'true';
   
+  console.log('📦 Setting npm registry...');
+  execSync('npm config set registry https://registry.npmjs.org/', { stdio: 'inherit' });
+  
   console.log('📦 Installing dependencies...');
   execSync('npm ci --include=dev', { stdio: 'inherit' });
   
