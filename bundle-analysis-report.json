@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-09-08T14:04:58.487Z",
+  "totalSize": 2717993,
+  "jsSize": 0,
+  "cssSize": 0,
+  "chunks": [],
+  "recommendations": [
+    {
+      "type": "warning",
+      "message": "Large total bundle size: 2.59 MB",
+      "suggestion": "Consider implementing tree shaking and removing unused dependencies"
+    }
+  ],
+  "performanceScore": 75
+}

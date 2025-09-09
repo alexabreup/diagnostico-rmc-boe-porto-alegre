@@ -1,0 +1,179 @@
+.metrics-display {
+  margin: 1.5rem 0;
+}
+
+.metrics-display__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-content);
+}
+
+.metrics-display__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.metrics-display__item {
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.metrics-display__item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.metrics-display__value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.metrics-display__unit {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--ifm-color-content-secondary);
+  margin-left: 0.25rem;
+}
+
+.metrics-display__label {
+  font-size: 0.875rem;
+  color: var(--ifm-color-content);
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.metrics-display__error-margin {
+  font-size: 0.75rem;
+  color: var(--ifm-color-content-secondary);
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.metrics-display__status {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 0.625rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  letter-spacing: 0.5px;
+}
+
+/* Status-based styling for items */
+.metrics-display__item--funcional {
+  border-left: 4px solid var(--technical-status-functional);
+}
+
+.metrics-display__item--degradado {
+  border-left: 4px solid var(--technical-status-degraded);
+}
+
+.metrics-display__item--crítico {
+  border-left: 4px solid var(--technical-status-critical);
+}
+
+.metrics-display__item--offline {
+  border-left: 4px solid var(--technical-status-offline);
+}
+
+/* Status indicator colors */
+.metrics-display__status--funcional {
+  background-color: var(--technical-status-functional);
+  color: white;
+}
+
+.metrics-display__status--degradado {
+  background-color: var(--technical-status-degraded);
+  color: white;
+}
+
+.metrics-display__status--crítico {
+  background-color: var(--technical-status-critical);
+  color: white;
+}
+
+.metrics-display__status--offline {
+  background-color: var(--technical-status-offline);
+  color: white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .metrics-display__grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .metrics-display__item {
+    padding: 0.75rem;
+  }
+
+  .metrics-display__value {
+    font-size: 1.5rem;
+  }
+
+  .metrics-display__status {
+    position: static;
+    margin-top: 0.5rem;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 480px) {
+  .metrics-display__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-display__item {
+    padding: 1rem;
+  }
+
+  .metrics-display__value {
+    font-size: 1.25rem;
+  }
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .metrics-display__item {
+  background: var(--ifm-color-emphasis-200);
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+[data-theme='dark'] .metrics-display__item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+/* Error state styles */
+.metrics-display--error {
+  border: 2px solid var(--ifm-color-danger);
+  border-radius: 8px;
+  background-color: var(--ifm-color-danger-contrast-background);
+  padding: 1.5rem;
+}
+
+.metrics-display__error {
+  text-align: center;
+}
+
+.metrics-display__error h3 {
+  color: var(--ifm-color-danger);
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+}
+
+.metrics-display__error p {
+  margin: 0.5rem 0;
+  color: var(--ifm-font-color-base);
+}

@@ -1,0 +1,186 @@
+.diagnostic-card {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  background: var(--ifm-background-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.diagnostic-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.diagnostic-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.diagnostic-card__title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ifm-color-content);
+}
+
+.diagnostic-card__status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.diagnostic-card__status-icon {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.diagnostic-card__status-label {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.diagnostic-card__content {
+  color: var(--ifm-color-content-secondary);
+  line-height: 1.6;
+}
+
+.diagnostic-card__evidence {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.diagnostic-card__evidence-title {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--ifm-color-content);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.diagnostic-card__evidence-content {
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 0;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.875rem;
+  line-height: 1.4;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* Status-specific styling */
+.diagnostic-card--functional {
+  border-left: 4px solid #28a745;
+}
+
+.diagnostic-card--functional .diagnostic-card__status {
+  background: rgba(40, 167, 69, 0.1);
+  color: #28a745;
+  border: 1px solid rgba(40, 167, 69, 0.3);
+}
+
+.diagnostic-card--degraded {
+  border-left: 4px solid #ffc107;
+}
+
+.diagnostic-card--degraded .diagnostic-card__status {
+  background: rgba(255, 193, 7, 0.1);
+  color: #856404;
+  border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.diagnostic-card--critical {
+  border-left: 4px solid #dc3545;
+}
+
+.diagnostic-card--critical .diagnostic-card__status {
+  background: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+  border: 1px solid rgba(220, 53, 69, 0.3);
+}
+
+.diagnostic-card--offline {
+  border-left: 4px solid #6c757d;
+}
+
+.diagnostic-card--offline .diagnostic-card__status {
+  background: rgba(108, 117, 125, 0.1);
+  color: #6c757d;
+  border: 1px solid rgba(108, 117, 125, 0.3);
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .diagnostic-card {
+  background: var(--ifm-background-surface-color);
+  border-color: var(--ifm-color-emphasis-200);
+}
+
+[data-theme='dark'] .diagnostic-card__evidence-content {
+  background: var(--ifm-color-emphasis-200);
+  border-color: var(--ifm-color-emphasis-300);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .diagnostic-card {
+    padding: 1rem;
+  }
+
+  .diagnostic-card__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .diagnostic-card__status {
+    align-self: flex-end;
+  }
+
+  .diagnostic-card__title {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .diagnostic-card {
+    padding: 0.75rem;
+  }
+
+  .diagnostic-card__evidence-content {
+    padding: 0.75rem;
+    font-size: 0.8125rem;
+  }
+}
+/* Error state styles */
+.diagnostic-card--error {
+  border-color: var(--ifm-color-danger);
+  background-color: var(--ifm-color-danger-contrast-background);
+}
+
+.diagnostic-card--error .diagnostic-card__status-icon {
+  color: var(--ifm-color-danger);
+}
+
+.diagnostic-card--error .diagnostic-card__status-label {
+  color: var(--ifm-color-danger);
+}
+
+.diagnostic-card__no-content {
+  font-style: italic;
+  color: var(--ifm-color-emphasis-600);
+  margin: 0;
+}

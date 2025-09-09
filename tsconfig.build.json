@@ -1,0 +1,21 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/components/**/*.ts",
+    "src/components/**/*.tsx"
+  ],
+  "exclude": [
+    "src/pages/**/*",
+    "src/components/HomepageFeatures/**/*",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "scripts/**/*",
+    ".docusaurus",
+    "build",
+    "node_modules"
+  ]
+}

@@ -1,0 +1,178 @@
+/**
+ * Performance Monitor Styles
+ * Author: Alexandre de Abreu Pereira <alexandre.abreu@eletromidia.com.br>
+ * Department: Hardware - Eletromidia
+ */
+
+.performance-monitor {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: var(--ifm-global-radius);
+  box-shadow: var(--ifm-global-shadow-md);
+  z-index: 9999;
+  min-width: 280px;
+  max-width: 320px;
+  font-family: var(--ifm-font-family-base);
+  font-size: 0.875rem;
+  backdrop-filter: blur(12px);
+  /* Performance optimization */
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.performance-monitor__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  background: var(--ifm-color-emphasis-0);
+  border-radius: var(--ifm-global-radius) var(--ifm-global-radius) 0 0;
+}
+
+.performance-monitor__header h4 {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: var(--ifm-font-weight-semibold);
+  color: var(--ifm-color-primary);
+}
+
+.performance-monitor__close {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  color: var(--ifm-color-content-secondary);
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all var(--ifm-transition-fast);
+}
+
+.performance-monitor__close:hover {
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-content);
+}
+
+.performance-monitor__metrics {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.performance-metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.performance-metric__label {
+  font-weight: var(--ifm-font-weight-medium);
+  color: var(--ifm-color-content);
+  font-size: 0.8125rem;
+}
+
+.performance-metric__value {
+  font-family: var(--ifm-font-family-monospace);
+  font-weight: var(--ifm-font-weight-semibold);
+  font-size: 0.8125rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  min-width: 80px;
+  text-align: right;
+}
+
+/* Performance score colors */
+.performance-metric__value.good {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--ifm-color-success-dark);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.performance-metric__value.needs-improvement {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--ifm-color-warning-dark);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.performance-metric__value.poor {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--ifm-color-danger-dark);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* Dark mode adjustments */
+[data-theme='dark'] .performance-metric__value.good {
+  background: rgba(63, 185, 80, 0.15);
+  color: var(--ifm-color-success);
+}
+
+[data-theme='dark'] .performance-metric__value.needs-improvement {
+  background: rgba(210, 153, 34, 0.15);
+  color: var(--ifm-color-warning);
+}
+
+[data-theme='dark'] .performance-metric__value.poor {
+  background: rgba(248, 81, 73, 0.15);
+  color: var(--ifm-color-danger);
+}
+
+.performance-monitor__footer {
+  padding: 0.5rem 1rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  background: var(--ifm-color-emphasis-0);
+  border-radius: 0 0 var(--ifm-global-radius) var(--ifm-global-radius);
+}
+
+.performance-monitor__footer small {
+  color: var(--ifm-color-content-secondary);
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .performance-monitor {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    min-width: auto;
+    max-width: none;
+  }
+}
+
+/* Animation for showing/hiding */
+.performance-monitor {
+  animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .performance-monitor {
+    animation: none;
+  }
+  
+  .performance-monitor__close {
+    transition: none;
+  }
+}

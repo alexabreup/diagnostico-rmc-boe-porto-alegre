@@ -1,0 +1,906 @@
+/**
+ * Relay.dev inspired technical documentation platform
+ * Custom CSS for Diagnóstico RMC - Plataforma Técnica
+ * Author: Alexandre de Abreu Pereira - Eletromidia Hardware Department
+ * 
+ * This stylesheet implements a relay.dev inspired design system with:
+ * - #ff4e00 primary color scheme
+ * - Inter font family for typography consistency
+ * - Comprehensive dark mode support
+ * - Technical documentation specific styling
+ */
+
+/* Performance optimized font loading - Inter font family for relay.dev consistency */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* Preload critical fonts for performance */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Inter Regular'), local('Inter-Regular');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local('Inter SemiBold'), local('Inter-SemiBold');
+}
+
+/* Import technical documentation styles */
+@import './technical.css';
+
+/* Relay.dev inspired color palette with #ff4e00 primary */
+:root {
+  /* Primary color palette - #ff4e00 (relay.dev inspired) */
+  --ifm-color-primary: #ff4e00;
+  --ifm-color-primary-dark: #e64600;
+  --ifm-color-primary-darker: #d94200;
+  --ifm-color-primary-darkest: #b33600;
+  --ifm-color-primary-light: #ff5c1a;
+  --ifm-color-primary-lighter: #ff6633;
+  --ifm-color-primary-lightest: #ff8066;
+
+  /* Relay.dev inspired secondary colors */
+  --ifm-color-secondary: #f8fafc;
+  --ifm-color-secondary-dark: #e2e8f0;
+  --ifm-color-secondary-darker: #cbd5e1;
+  --ifm-color-secondary-darkest: #94a3b8;
+  --ifm-color-secondary-light: #ffffff;
+  --ifm-color-secondary-lighter: #ffffff;
+  --ifm-color-secondary-lightest: #ffffff;
+
+  /* Technical status colors (relay.dev inspired) */
+  --ifm-color-success: #10b981;
+  --ifm-color-success-dark: #059669;
+  --ifm-color-info: #3b82f6;
+  --ifm-color-info-dark: #2563eb;
+  --ifm-color-warning: #f59e0b;
+  --ifm-color-warning-dark: #d97706;
+  --ifm-color-danger: #ef4444;
+  --ifm-color-danger-dark: #dc2626;
+
+  /* Relay.dev inspired neutral colors */
+  --ifm-color-gray-0: #ffffff;
+  --ifm-color-gray-50: #f9fafb;
+  --ifm-color-gray-100: #f3f4f6;
+  --ifm-color-gray-200: #e5e7eb;
+  --ifm-color-gray-300: #d1d5db;
+  --ifm-color-gray-400: #9ca3af;
+  --ifm-color-gray-500: #6b7280;
+  --ifm-color-gray-600: #4b5563;
+  --ifm-color-gray-700: #374151;
+  --ifm-color-gray-800: #1f2937;
+  --ifm-color-gray-900: #111827;
+
+  /* Typography - Inter font family (relay.dev standard) */
+  --ifm-font-family-base:
+    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', sans-serif;
+  --ifm-font-family-monospace:
+    'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New',
+    monospace;
+
+  /* Typography scale (relay.dev inspired) */
+  --ifm-font-size-base: 16px;
+  --ifm-line-height-base: 1.6;
+  --ifm-font-weight-light: 300;
+  --ifm-font-weight-normal: 400;
+  --ifm-font-weight-medium: 500;
+  --ifm-font-weight-semibold: 600;
+  --ifm-font-weight-bold: 700;
+
+  /* Heading typography */
+  --ifm-h1-font-size: 2.5rem;
+  --ifm-h2-font-size: 2rem;
+  --ifm-h3-font-size: 1.5rem;
+  --ifm-h4-font-size: 1.25rem;
+  --ifm-h5-font-size: 1.125rem;
+  --ifm-h6-font-size: 1rem;
+
+  /* Code styling */
+  --ifm-code-font-size: 0.875rem;
+  --ifm-code-background: var(--ifm-color-gray-100);
+  --ifm-code-border-radius: 4px;
+  --ifm-code-padding-horizontal: 0.375rem;
+  --ifm-code-padding-vertical: 0.125rem;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 78, 0, 0.08);
+
+  /* Spacing and layout (relay.dev inspired) */
+  --ifm-spacing-horizontal: 1.5rem;
+  --ifm-spacing-vertical: 1.5rem;
+  --ifm-navbar-height: 4rem;
+  --ifm-footer-padding-vertical: 2rem;
+
+  /* Border radius for relay.dev style */
+  --ifm-global-radius: 8px;
+  --ifm-button-border-radius: 6px;
+  --ifm-card-border-radius: 12px;
+
+  /* Shadows (relay.dev inspired) */
+  --ifm-global-shadow-lw:
+    0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --ifm-global-shadow-md:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --ifm-global-shadow-tl:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Transitions */
+  --ifm-transition-fast: 150ms ease;
+  --ifm-transition-slow: 300ms ease;
+}
+
+/* Dark mode - relay.dev inspired dark theme */
+[data-theme='dark'] {
+  /* Primary colors adjusted for dark mode */
+  --ifm-color-primary: #ff6633;
+  --ifm-color-primary-dark: #ff4e00;
+  --ifm-color-primary-darker: #e64600;
+  --ifm-color-primary-darkest: #cc3d00;
+  --ifm-color-primary-light: #ff7a4d;
+  --ifm-color-primary-lighter: #ff8066;
+  --ifm-color-primary-lightest: #ff9980;
+
+  /* Dark theme background colors (relay.dev inspired) */
+  --ifm-background-color: #0d1117;
+  --ifm-background-surface-color: #161b22;
+  --ifm-color-emphasis-0: #21262d;
+  --ifm-color-emphasis-100: #30363d;
+  --ifm-color-emphasis-200: #484f58;
+  --ifm-color-emphasis-300: #656c76;
+
+  /* Dark theme text colors */
+  --ifm-color-content: #e6edf3;
+  --ifm-color-content-secondary: #7d8590;
+  --ifm-color-content-inverse: #0d1117;
+
+  /* Dark theme status colors */
+  --ifm-color-success: #3fb950;
+  --ifm-color-success-dark: #2ea043;
+  --ifm-color-info: #58a6ff;
+  --ifm-color-info-dark: #388bfd;
+  --ifm-color-warning: #d29922;
+  --ifm-color-warning-dark: #bb8009;
+  --ifm-color-danger: #f85149;
+  --ifm-color-danger-dark: #da3633;
+
+  /* Dark theme neutral colors */
+  --ifm-color-gray-0: #0d1117;
+  --ifm-color-gray-50: #161b22;
+  --ifm-color-gray-100: #21262d;
+  --ifm-color-gray-200: #30363d;
+  --ifm-color-gray-300: #484f58;
+  --ifm-color-gray-400: #656c76;
+  --ifm-color-gray-500: #7d8590;
+  --ifm-color-gray-600: #8b949e;
+  --ifm-color-gray-700: #b1bac4;
+  --ifm-color-gray-800: #c9d1d9;
+  --ifm-color-gray-900: #e6edf3;
+
+  /* Code styling for dark mode */
+  --ifm-code-background: var(--ifm-color-gray-100);
+  --docusaurus-highlighted-code-line-bg: rgba(255, 102, 51, 0.15);
+
+  /* Navbar dark styling */
+  --ifm-navbar-background-color: rgba(22, 27, 34, 0.95);
+  --ifm-navbar-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.06);
+
+  /* Footer dark styling */
+  --ifm-footer-background-color: var(--ifm-color-gray-50);
+  --ifm-footer-color: var(--ifm-color-content-secondary);
+}
+
+/* Performance optimizations */
+* {
+  box-sizing: border-box;
+}
+
+/* Critical rendering path optimization */
+html {
+  font-display: swap;
+}
+
+/* Global typography improvements - Inter font optimization */
+* {
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  font-variant-numeric: tabular-nums;
+}
+
+body {
+  font-family: var(--ifm-font-family-base);
+  font-weight: var(--ifm-font-weight-normal);
+  line-height: var(--ifm-line-height-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Performance optimization for scrolling */
+  scroll-behavior: smooth;
+  /* Optimize repaints */
+  will-change: scroll-position;
+}
+
+/* Heading styles - relay.dev inspired */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ifm-font-family-base);
+  font-weight: var(--ifm-font-weight-semibold);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  font-size: var(--ifm-h1-font-size);
+  font-weight: var(--ifm-font-weight-bold);
+}
+
+h2 {
+  font-size: var(--ifm-h2-font-size);
+}
+
+h3 {
+  font-size: var(--ifm-h3-font-size);
+}
+
+/* Navbar styling - relay.dev inspired with performance optimizations */
+.navbar {
+  box-shadow: var(--ifm-global-shadow-lw);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  transition: all var(--ifm-transition-fast);
+  /* Performance optimization for fixed positioning */
+  will-change: transform;
+  /* GPU acceleration */
+  transform: translateZ(0);
+}
+
+.navbar--fixed-top {
+  background-color: rgba(255, 255, 255, 0.95);
+  /* Optimize compositing */
+  contain: layout style paint;
+}
+
+[data-theme='dark'] .navbar--fixed-top {
+  background-color: rgba(22, 27, 34, 0.95);
+}
+
+/* Navbar brand styling */
+.navbar__brand {
+  font-weight: var(--ifm-font-weight-semibold);
+  font-size: 1.125rem;
+  color: var(--ifm-color-gray-800) !important;
+  display: flex;
+  align-items: center;
+  height: var(--ifm-navbar-height);
+}
+
+[data-theme='dark'] .navbar__brand {
+  color: var(--ifm-color-gray-100) !important;
+}
+
+/* Logo sizing - 30% of original size to fit navbar properly */
+.navbar__brand .navbar__logo {
+  height: 30px !important;
+  width: auto !important;
+  max-height: 30px !important;
+  margin-right: 0.5rem;
+}
+
+/* Alternative selector for logo image */
+.navbar__brand img {
+  height: 30px !important;
+  width: auto !important;
+  max-height: 30px !important;
+  margin-right: 0.5rem;
+}
+
+/* Ensure logo doesn't overflow navbar */
+.navbar__logo img,
+.navbar__brand img {
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+/* Responsive logo sizing */
+@media (max-width: 768px) {
+  .navbar__brand .navbar__logo,
+  .navbar__brand img {
+    height: 25px !important;
+    max-height: 25px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar__brand .navbar__logo,
+  .navbar__brand img {
+    height: 22px !important;
+    max-height: 22px !important;
+  }
+}
+
+/* Navbar items styling */
+.navbar__item {
+  font-weight: var(--ifm-font-weight-medium);
+  font-size: 0.9375rem;
+}
+
+/* Navbar links - ensure visibility in light mode */
+.navbar__link {
+  transition: color var(--ifm-transition-fast);
+  color: var(--ifm-color-gray-700) !important;
+}
+
+.navbar__link:hover {
+  color: var(--ifm-color-primary) !important;
+}
+
+/* Dark mode navbar links */
+[data-theme='dark'] .navbar__link {
+  color: var(--ifm-color-gray-200) !important;
+}
+
+[data-theme='dark'] .navbar__link:hover {
+  color: var(--ifm-color-primary-light) !important;
+}
+
+/* Navbar primary style override for light mode visibility */
+.navbar--primary {
+  --ifm-navbar-background-color: rgba(255, 255, 255, 0.95);
+  --ifm-navbar-link-color: var(--ifm-color-gray-700);
+  --ifm-navbar-link-hover-color: var(--ifm-color-primary);
+  --ifm-menu-color-active: var(--ifm-color-primary);
+  --ifm-navbar-search-input-color: var(--ifm-color-gray-600);
+}
+
+/* Dark mode navbar primary style */
+[data-theme='dark'] .navbar--primary {
+  --ifm-navbar-background-color: rgba(22, 27, 34, 0.95);
+  --ifm-navbar-link-color: var(--ifm-color-gray-200);
+  --ifm-navbar-link-hover-color: var(--ifm-color-primary-light);
+  --ifm-menu-color-active: var(--ifm-color-primary-light);
+  --ifm-navbar-search-input-color: var(--ifm-color-gray-400);
+}
+
+/* Menu dropdown styling */
+.navbar__item.dropdown .navbar__link:after {
+  border-top-color: var(--ifm-color-gray-600);
+}
+
+[data-theme='dark'] .navbar__item.dropdown .navbar__link:after {
+  border-top-color: var(--ifm-color-gray-300);
+}
+
+/* Search input styling */
+.navbar__search-input {
+  color: var(--ifm-color-gray-700) !important;
+  background-color: var(--ifm-color-gray-100) !important;
+  border: 1px solid var(--ifm-color-gray-300) !important;
+}
+
+[data-theme='dark'] .navbar__search-input {
+  color: var(--ifm-color-gray-200) !important;
+  background-color: var(--ifm-color-gray-800) !important;
+  border: 1px solid var(--ifm-color-gray-600) !important;
+}
+
+/* Button styling - relay.dev inspired */
+.button {
+  font-weight: var(--ifm-font-weight-medium);
+  font-size: 0.9375rem;
+  border-radius: var(--ifm-button-border-radius);
+  transition: all var(--ifm-transition-fast);
+  border: 1px solid transparent;
+}
+
+.button--primary {
+  background: linear-gradient(
+    135deg,
+    var(--ifm-color-primary) 0%,
+    var(--ifm-color-primary-dark) 100%
+  );
+  border-color: var(--ifm-color-primary);
+}
+
+.button--primary:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--ifm-global-shadow-md);
+  background: linear-gradient(
+    135deg,
+    var(--ifm-color-primary-light) 0%,
+    var(--ifm-color-primary) 100%
+  );
+}
+
+.button--secondary {
+  background-color: var(--ifm-color-secondary);
+  border-color: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-content);
+}
+
+.button--secondary:hover {
+  background-color: var(--ifm-color-emphasis-100);
+  transform: translateY(-1px);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+/* Card styling for technical components */
+.card {
+  border-radius: var(--ifm-card-border-radius);
+  box-shadow: var(--ifm-global-shadow-lw);
+  transition: all var(--ifm-transition-slow);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  background-color: var(--ifm-background-surface-color);
+}
+
+.card:hover {
+  box-shadow: var(--ifm-global-shadow-md);
+  transform: translateY(-2px);
+}
+
+.card__header {
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  padding: 1.5rem;
+}
+
+.card__body {
+  padding: 1.5rem;
+}
+
+.card__footer {
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  padding: 1rem 1.5rem;
+  background-color: var(--ifm-color-emphasis-0);
+}
+
+/* Code and pre styling - relay.dev inspired */
+code {
+  background-color: var(--ifm-code-background);
+  border-radius: var(--ifm-code-border-radius);
+  font-family: var(--ifm-font-family-monospace);
+  font-size: var(--ifm-code-font-size);
+  padding: var(--ifm-code-padding-vertical) var(--ifm-code-padding-horizontal);
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+pre {
+  border-radius: var(--ifm-global-radius);
+  box-shadow: var(--ifm-global-shadow-lw);
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+/* Technical documentation specific styles */
+.technical-content {
+  font-family: var(--ifm-font-family-base);
+  line-height: var(--ifm-line-height-base);
+}
+
+.technical-content h1,
+.technical-content h2,
+.technical-content h3,
+.technical-content h4,
+.technical-content h5,
+.technical-content h6 {
+  font-weight: var(--ifm-font-weight-semibold);
+  color: var(--ifm-color-primary);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.technical-content p {
+  margin-bottom: 1.5rem;
+}
+
+.technical-content ul,
+.technical-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.technical-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* Status indicators - relay.dev inspired */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: var(--ifm-font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-funcional {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--ifm-color-success-dark);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.status-degradado {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--ifm-color-warning-dark);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.status-critico {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--ifm-color-danger-dark);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.status-offline {
+  background-color: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-content-secondary);
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+/* Dark mode status adjustments */
+[data-theme='dark'] .status-funcional {
+  background-color: rgba(63, 185, 80, 0.15);
+  color: var(--ifm-color-success);
+}
+
+[data-theme='dark'] .status-degradado {
+  background-color: rgba(210, 153, 34, 0.15);
+  color: var(--ifm-color-warning);
+}
+
+[data-theme='dark'] .status-critico {
+  background-color: rgba(248, 81, 73, 0.15);
+  color: var(--ifm-color-danger);
+}
+
+/* Table styling - relay.dev inspired */
+table {
+  border-collapse: collapse;
+  border-radius: var(--ifm-global-radius);
+  overflow: hidden;
+  box-shadow: var(--ifm-global-shadow-lw);
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+th {
+  background-color: var(--ifm-color-emphasis-100);
+  font-weight: var(--ifm-font-weight-semibold);
+  text-align: left;
+  padding: 1rem;
+  border-bottom: 2px solid var(--ifm-color-emphasis-200);
+}
+
+td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+tr:hover {
+  background-color: var(--ifm-color-emphasis-0);
+}
+
+/* Sidebar styling - relay.dev inspired */
+.theme-doc-sidebar-container {
+  border-right: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.menu__link {
+  font-weight: var(--ifm-font-weight-normal);
+  border-radius: var(--ifm-button-border-radius);
+  transition: all var(--ifm-transition-fast);
+  color: var(--ifm-color-gray-700) !important;
+}
+
+.menu__link:hover {
+  background-color: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-primary) !important;
+}
+
+.menu__link--active {
+  background-color: rgba(255, 78, 0, 0.1);
+  color: var(--ifm-color-primary) !important;
+  font-weight: var(--ifm-font-weight-medium);
+}
+
+/* Dark mode sidebar styling */
+[data-theme='dark'] .menu__link {
+  color: var(--ifm-color-gray-200) !important;
+}
+
+[data-theme='dark'] .menu__link:hover {
+  color: var(--ifm-color-primary-light) !important;
+}
+
+[data-theme='dark'] .menu__link--active {
+  color: var(--ifm-color-primary-light) !important;
+}
+
+/* Menu list item styling */
+.menu__list-item {
+  color: var(--ifm-color-gray-700);
+}
+
+[data-theme='dark'] .menu__list-item {
+  color: var(--ifm-color-gray-200);
+}
+
+/* Menu caret (arrow) styling */
+.menu__caret:before {
+  background: var(--ifm-menu-link-sublist-icon) no-repeat;
+  filter: var(--ifm-menu-link-sublist-icon-filter);
+}
+
+/* Ensure menu text is visible in light mode */
+.menu__list .menu__link {
+  color: var(--ifm-color-gray-700) !important;
+}
+
+[data-theme='dark'] .menu__list .menu__link {
+  color: var(--ifm-color-gray-200) !important;
+}
+
+/* Footer styling - relay.dev inspired */
+.footer {
+  background-color: var(--ifm-color-gray-50);
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  padding: var(--ifm-footer-padding-vertical) 0;
+}
+
+[data-theme='dark'] .footer {
+  background-color: var(--ifm-footer-background-color);
+}
+
+.footer__title {
+  color: var(--ifm-color-primary);
+  font-weight: var(--ifm-font-weight-semibold);
+  font-size: 1.125rem;
+}
+
+.footer__item {
+  font-weight: var(--ifm-font-weight-normal);
+}
+
+.footer__link-item {
+  transition: color var(--ifm-transition-fast);
+}
+
+.footer__link-item:hover {
+  color: var(--ifm-color-primary);
+}
+
+/* Footer dark style override for better visibility */
+.footer--dark {
+  --ifm-footer-background-color: #f8fafc;
+  --ifm-footer-color: var(--ifm-color-gray-700);
+  --ifm-footer-link-color: var(--ifm-color-gray-600);
+  --ifm-footer-title-color: var(--ifm-color-gray-800);
+  background-color: var(--ifm-footer-background-color);
+  color: var(--ifm-footer-color);
+}
+
+/* Dark mode footer styling */
+[data-theme='dark'] .footer--dark {
+  --ifm-footer-background-color: #303846;
+  --ifm-footer-color: var(--ifm-color-gray-300);
+  --ifm-footer-link-color: var(--ifm-color-gray-400);
+  --ifm-footer-title-color: var(--ifm-color-gray-100);
+}
+
+/* Footer title styling */
+.footer--dark .footer__title {
+  color: var(--ifm-footer-title-color) !important;
+}
+
+/* Footer link styling */
+.footer--dark .footer__link-item {
+  color: var(--ifm-footer-link-color) !important;
+}
+
+.footer--dark .footer__link-item:hover {
+  color: var(--ifm-color-primary) !important;
+}
+
+/* Footer text styling */
+.footer--dark .footer__item {
+  color: var(--ifm-footer-color) !important;
+}
+
+/* Footer copyright styling */
+.footer--dark .footer__copyright {
+  color: var(--ifm-footer-color) !important;
+}
+
+/* Ensure footer links are visible in light mode */
+.footer .footer__link-item {
+  color: var(--ifm-color-gray-600) !important;
+}
+
+.footer .footer__title {
+  color: var(--ifm-color-gray-800) !important;
+}
+
+.footer .footer__copyright {
+  color: var(--ifm-color-gray-600) !important;
+}
+
+/* Dark mode footer overrides */
+[data-theme='dark'] .footer .footer__link-item {
+  color: var(--ifm-color-gray-400) !important;
+}
+
+[data-theme='dark'] .footer .footer__title {
+  color: var(--ifm-color-gray-100) !important;
+}
+
+[data-theme='dark'] .footer .footer__copyright {
+  color: var(--ifm-color-gray-300) !important;
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+  :root {
+    --ifm-spacing-horizontal: 1rem;
+    --ifm-h1-font-size: 2rem;
+    --ifm-h2-font-size: 1.75rem;
+    --ifm-h3-font-size: 1.375rem;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  .card__header,
+  .card__body {
+    padding: 1rem;
+  }
+
+  table {
+    font-size: 0.875rem;
+  }
+
+  th,
+  td {
+    padding: 0.5rem;
+  }
+}
+
+/* Performance optimizations for animations and transitions */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* GPU acceleration for frequently animated elements */
+.card,
+.button,
+.navbar,
+.menu__link {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Optimize images for performance */
+img {
+  max-width: 100%;
+  height: auto;
+  /* Lazy loading hint */
+  loading: lazy;
+  /* Decode hint for better performance */
+  decoding: async;
+}
+
+/* Critical resource hints */
+.navbar__brand img,
+.footer__logo img {
+  /* Prioritize logo loading */
+  loading: eager;
+  decoding: sync;
+}
+
+/* Additional navbar logo optimizations */
+.navbar__brand {
+  /* Prevent logo from affecting navbar height */
+  min-height: 0;
+  padding: 0.25rem 0;
+}
+
+/* Ensure navbar title aligns with logo */
+.navbar__title {
+  line-height: 1.2;
+  margin-left: 0.25rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Logo container optimization */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Prevent logo from breaking navbar layout */
+.navbar__brand .navbar__logo,
+.navbar__brand img {
+  flex-shrink: 0;
+  transition: opacity var(--ifm-transition-fast);
+}
+
+.navbar__brand:hover .navbar__logo,
+.navbar__brand:hover img {
+  opacity: 0.8;
+}
+
+/* Optimize table rendering */
+table {
+  /* Improve table rendering performance */
+  table-layout: fixed;
+  contain: layout style paint;
+}
+
+/* Optimize code blocks */
+pre,
+code {
+  /* Improve text rendering */
+  text-rendering: optimizeSpeed;
+  /* Contain layout changes */
+  contain: layout style;
+}
+
+/* Performance optimization for large content */
+.markdown {
+  /* Optimize text rendering for large documents */
+  text-rendering: optimizeSpeed;
+  /* Contain layout changes */
+  contain: layout style;
+}
+
+/* Optimize sidebar performance */
+.theme-doc-sidebar-container {
+  /* Improve scrolling performance */
+  will-change: scroll-position;
+  /* Contain layout changes */
+  contain: layout style paint;
+}
+
+/* Print styles */
+@media print {
+  .navbar,
+  .footer,
+  .theme-doc-sidebar-container {
+    display: none !important;
+  }
+
+  .main-wrapper {
+    margin-left: 0 !important;
+  }
+
+  * {
+    color: black !important;
+    background: white !important;
+  }
+
+  /* Optimize print performance */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  table {
+    page-break-inside: avoid;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+}

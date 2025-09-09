@@ -1,0 +1,402 @@
+/**
+ * Technical Documentation Styles
+ * Specialized styles for technical components, status indicators, and evidence blocks
+ * Author: Alexandre de Abreu Pereira - Departamento de Hardware - Eletromidia
+ */
+
+/* ===== TECHNICAL TABLES ===== */
+.technical-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-family:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+  background: var(--ifm-background-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.technical-table th {
+  background: var(--ifm-color-primary);
+  color: white;
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.technical-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  font-size: 0.9rem;
+  vertical-align: top;
+}
+
+.technical-table tr:hover {
+  background: var(--ifm-color-emphasis-100);
+}
+
+.technical-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Status column highlighting */
+.technical-table .status-column {
+  font-weight: 600;
+  text-align: center;
+  min-width: 120px;
+}
+
+/* ===== STATUS INDICATORS ===== */
+.status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-indicator::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Functional Status */
+.status-funcional {
+  background: rgba(34, 197, 94, 0.1);
+  color: #16a34a;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.status-funcional::before {
+  background: #16a34a;
+}
+
+/* Degraded Status */
+.status-degradado {
+  background: rgba(251, 191, 36, 0.1);
+  color: #d97706;
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.status-degradado::before {
+  background: #d97706;
+}
+
+/* Critical Status */
+.status-critico {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.status-critico::before {
+  background: #dc2626;
+}
+
+/* Offline Status */
+.status-offline {
+  background: rgba(107, 114, 128, 0.1);
+  color: #6b7280;
+  border: 1px solid rgba(107, 114, 128, 0.3);
+}
+
+.status-offline::before {
+  background: #6b7280;
+}
+
+/* ===== EVIDENCE BLOCKS ===== */
+.evidence-block {
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.evidence-block-header {
+  background: var(--ifm-color-emphasis-100);
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.evidence-block-content {
+  padding: 16px;
+  background: var(--ifm-background-color);
+}
+
+.evidence-block-code {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  background: var(--ifm-code-background);
+  padding: 16px;
+  border-radius: 4px;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.evidence-block-log {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  padding: 16px;
+  border-radius: 4px;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.evidence-block-data {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  background: var(--ifm-color-emphasis-100);
+  padding: 16px;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+/* ===== DIAGNOSTIC CARDS ===== */
+.diagnostic-card {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  overflow: hidden;
+  background: var(--ifm-background-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.diagnostic-card-header {
+  padding: 16px;
+  background: var(--ifm-color-emphasis-100);
+  border-bottom: 1px solid var(--ifm-color-emphasis-300);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.diagnostic-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.diagnostic-card-content {
+  padding: 16px;
+}
+
+.diagnostic-card-evidence {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+/* ===== METRICS DISPLAY ===== */
+.metrics-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin: 1.5rem 0;
+}
+
+.metric-item {
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.metric-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+  margin-bottom: 4px;
+  font-family: 'Inter', sans-serif;
+}
+
+.metric-label {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.metric-unit {
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-600);
+  font-weight: 400;
+}
+
+.metric-status {
+  margin-top: 8px;
+}
+
+/* ===== TECHNICAL SPECIFICATIONS ===== */
+.tech-spec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+  margin: 1.5rem 0;
+}
+
+.tech-spec-item {
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.tech-spec-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-600);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.tech-spec-value {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--ifm-color-emphasis-800);
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .technical-table {
+    font-size: 0.8rem;
+  }
+
+  .technical-table th,
+  .technical-table td {
+    padding: 8px 12px;
+  }
+
+  .metrics-display {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+  }
+
+  .metric-item {
+    padding: 12px;
+  }
+
+  .metric-value {
+    font-size: 1.5rem;
+  }
+
+  .diagnostic-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .evidence-block-code,
+  .evidence-block-log,
+  .evidence-block-data {
+    font-size: 0.75rem;
+    padding: 12px;
+  }
+
+  .tech-spec-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .technical-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .metrics-display {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .status-indicator {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+  }
+
+  .diagnostic-card-content,
+  .evidence-block-content {
+    padding: 12px;
+  }
+}
+
+/* ===== DARK MODE SUPPORT ===== */
+[data-theme='dark'] .technical-table {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme='dark'] .evidence-block-log {
+  background: #0d1117;
+  color: #e6edf3;
+}
+
+[data-theme='dark'] .diagnostic-card,
+[data-theme='dark'] .metric-item,
+[data-theme='dark'] .tech-spec-item {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== UTILITY CLASSES ===== */
+.text-monospace {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+.text-technical {
+  font-family:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+  font-variant-numeric: tabular-nums;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mb-technical {
+  margin-bottom: 1.5rem;
+}
+
+.mt-technical {
+  margin-top: 1.5rem;
+}
