@@ -7,6 +7,7 @@
     "start": "docusaurus start --port 3013",
     "start:clean": "SUPPRESS_WARNINGS=true docusaurus start --port 3013",
     "build": "VALIDATION_STRICT=false node scripts/build-validation.js && docusaurus build",
+    "build:netlify": "node scripts/netlify-build.js",
     "build:dev": "VALIDATION_STRICT=false node scripts/build-validation.js && docusaurus build",
     "build:analyze": "ANALYZE=true npm run build",
     "build:fast": "docusaurus build --no-minify",
