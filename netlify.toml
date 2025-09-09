@@ -1,0 +1,22 @@
+[build]
+  publish = "build"
+  command = "npm run build:dev"
+
+[build.environment]
+  NODE_VERSION = "18"
+  VALIDATION_STRICT = "false"
+  NODE_ENV = "production"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[context.production]
+  command = "npm run build"
+
+[context.deploy-preview]
+  command = "npm run build"
+
+[context.branch-deploy]
+  command = "npm run build"

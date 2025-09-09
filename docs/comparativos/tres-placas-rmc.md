@@ -85,7 +85,7 @@ Identificamos **três estágios distintos** funcional degradação:
   ]}
 />
 
-## Análise críticoíticoíticoítica funcional Schedule
+## Análise crítica funcional Schedule
 
 ### Estado funcional Horários
 

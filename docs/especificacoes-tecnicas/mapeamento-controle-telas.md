@@ -245,7 +245,7 @@ Saífuncional PWM A (funcionando):
 ├─ Tensão: 0-3.3V variável
 ├─ Frequência: ~1kHz
 ├─ Duty cycle: Conforme configuração
-└─ status: críticoíticoíticoíticoíticoítico presente
+└─ status: crítico presente
 
 Saífuncional PWM B (problema):
 ├─ Tensão: 0V fixo ou 3.3V fixo

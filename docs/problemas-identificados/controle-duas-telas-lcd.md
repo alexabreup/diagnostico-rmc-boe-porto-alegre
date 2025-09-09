@@ -42,7 +42,7 @@ Baseado na análise das 4 placas RMC, identificamos que **75% das placas** têm 
   data={[
     ['RMC', 'Funcionando', 'Controlador principal operacional'],
     ['Tela 1', 'Funcionando', 'Operação normal'],
-    ['Tela 2', 'Apagada', 'Sem críticoíticoítico funcional brilho'],
+    ['Tela 2', 'Apagada', 'Sem crítico funcional brilho'],
     ['AD BOARDS', 'Duas placas', 'Placas funcional vídeo independentes']
   ]}
   statusCount={2}

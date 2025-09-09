@@ -76,7 +76,7 @@ Mapeamos o **ciclo completo funcional vida** das placas RMC, desde o estado perf
   ]}
 />
 
-## Análise críticoíticoíticoítica funcional Schedule
+## Análise crítica funcional Schedule
 
 ### Comparação funcional Performance
 
@@ -376,7 +376,7 @@ PWM variado: 0-85%
 1. **MUB-LAB como referência** funcional excelência
 2. **funcional-1105 como mínimo** aceitável
 3. **funcional-1107 como alerta** funcional degradação
-4. **850Y POA como falha** críticoíticoíticoítica
+4. **850Y POA como falha** crítica
 </DiagnosticCard>
 
 ### Processo funcional QA Baseado em 4 Estágios

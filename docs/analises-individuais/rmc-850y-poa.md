@@ -205,6 +205,6 @@ st-flash reset
 **Prioridade 2 (48h)**: Correção necessária
 - Dados completamente zerados
 - Requer reconfiguração total
-- Funcionalidade críticoíticoíticoítica comprometida
+- Funcionalidade crítica comprometida
 </DiagnosticCard>
 

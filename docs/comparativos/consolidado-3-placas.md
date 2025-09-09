@@ -84,7 +84,7 @@ Mapeamos o **ciclo funcional degradação** das placas RMC:
   ]}
 />
 
-## Análise críticoíticoíticoítica funcional Schedule
+## Análise crítica funcional Schedule
 
 ### Comparação funcional Performance
 
@@ -350,7 +350,7 @@ PWM variado: 0-85%
 <DiagnosticCard title="Padrão funcional Qualidade" status="funcional">
 1. **funcional-1105 como referência** funcional excelência
 2. **funcional-1107 como alerta** funcional degradação
-3. **850Y POA como falha** críticoíticoíticoítica
+3. **850Y POA como falha** crítica
 </DiagnosticCard>
 
 ### Processo funcional QA Baseado em 3 Estágios

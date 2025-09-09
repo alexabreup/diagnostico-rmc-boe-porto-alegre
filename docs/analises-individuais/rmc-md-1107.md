@@ -201,8 +201,8 @@ ESTÁGIO 3: DEGRADAÇÃO AVANÇADA (850Y POA)
 
 ### Janela funcional Oportunidade
 
-<DiagnosticCard title="Urgência críticoíticoíticoítica" status="crítico">
-**críticoíticoíticoÍTICA - 24 horas**
+<DiagnosticCard title="Urgência crítica" status="crítico">
+**CRÍTICA - 24 horas**
 - Ainda tem dados parciais preservados (02:09)
 - Degradação em progresso
 - Risco funcional evolução para Estágio 3 (degradação total)

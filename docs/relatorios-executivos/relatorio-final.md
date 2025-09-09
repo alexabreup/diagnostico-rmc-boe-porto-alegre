@@ -266,7 +266,7 @@ A **funcional-1105** e **MUB-LAB** provam que o firmware V1.01 resolve completam
 
 ## Recomendações Finais
 
-### Ação Imediata (críticoíticoíticoítica)
+### Ação Imediata (crítica)
 
 <EvidenceBlock title="Ação Imediata" type="code">
 ```
