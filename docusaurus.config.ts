@@ -73,48 +73,8 @@ const config: Config = {
         disableInDev: false,
       },
     ],
-    // PWA plugin for better caching and performance
-    process.env.NODE_ENV === 'production' && [
-      '@docusaurus/plugin-pwa',
-      {
-        debug: false,
-        offlineModeActivationStrategies: [
-          'appInstalled',
-          'standalone',
-          'queryString',
-        ],
-        pwaHead: [
-          {
-            tagName: 'link',
-            rel: 'icon',
-            href: '/img/eletrro3.png',
-          },
-          {
-            tagName: 'link',
-            rel: 'manifest',
-            href: '/manifest.json',
-          },
-          {
-            tagName: 'meta',
-            name: 'theme-color',
-            content: '#ff4e00',
-          },
-        ],
-      },
-    ],
-    // Client redirects plugin for better performance
-    [
-      '@docusaurus/plugin-client-redirects',
-      {
-        redirects: [
-          // Add redirects for better SEO and performance
-          {
-            to: '/intro',
-            from: ['/docs/intro'],
-          },
-        ],
-      },
-    ],
+    // PWA functionality disabled for now - can be enabled later if needed
+    // Client redirects disabled for now - can be enabled later if needed
   ].filter(Boolean),
 
   // Author metadata for Alexandre de Abreu Pereira
