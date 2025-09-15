@@ -12,7 +12,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Análises Individuais',
-    Svg: require('@site/static/img/gd32f103c8t6.png').default,
+    Svg: require('@site/static/img/arm-stm32.png').default,
     description: (
       <>
         Documentação técnica detalhada de cada placa RMC analisada, incluindo
