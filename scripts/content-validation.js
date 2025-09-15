@@ -255,7 +255,8 @@ function validateStatusClassifications(content) {
   const errors = [];
   
   // Find status references and validate they use approved terms
-  const statusPattern = /status[:\s]*([a-záêçõ]+)/gi;
+  // Exclude statusCount and other technical parameters
+  const statusPattern = /status[:\s]+"([a-záêçõ]+)"/gi;
   const matches = [...content.matchAll(statusPattern)];
   
   for (const match of matches) {

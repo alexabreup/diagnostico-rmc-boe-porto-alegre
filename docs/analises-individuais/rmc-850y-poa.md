@@ -173,38 +173,5 @@ lwip-1.4.1 (stack TCP/IP)
   statusCount={2}
 />
 
-## Solução Recomendada
 
-### Atualização funcional Firmware
-
-<EvidenceBlock title="Comandos funcional Atualização" type="code">
-```bash
-# Backup funcional segurança
-st-flash read backup_850y_$(date +%Y%m%d_%H%M%S).bin 0x08000000 0x40000
-
-# Atualização para V1.01
-st-flash write ZGS126_Upgrade.bin 0x08000000
-
-# Verificação
-st-flash reset
-```
-</EvidenceBlock>
-
-### Resultado Esperado
-
-<DiagnosticCard title="Resultado Esperado" status="funcional">
-- Schedule volta a funcionar
-- Implementação funcional horário restaurada
-- Configuração funcional rede preservada
-- Reconfiguração funcional schedule necessária
-</DiagnosticCard>
-
-## Prioridade funcional Correção
-
-<DiagnosticCard title="Prioridade funcional Correção" status="crítico">
-**Prioridade 2 (48h)**: Correção necessária
-- Dados completamente zerados
-- Requer reconfiguração total
-- Funcionalidade crítica comprometida
-</DiagnosticCard>
 

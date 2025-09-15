@@ -1,9 +1,9 @@
 ---
 title: Introdução Alternativa
 author: Alexandre de Abreu Pereira
-author_email: alexandre.pereira@eletromidia.com.br
-department: Hardware Department - Eletromidia
-date: 2025-01-09
+author_email: alexandre.abreu@eletromidia.com.br
+department: Hardware - Eletromidia
+date: 2025-01-09T00:00:00.000Z
 sidebar_position: 2
 ---
 

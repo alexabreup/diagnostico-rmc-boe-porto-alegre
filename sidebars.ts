@@ -51,36 +51,6 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         'problemas-identificados/index',
-        'problemas-identificados/controle-duas-telas-lcd',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Especificações Técnicas',
-      description: 'Especificações técnicas, mapeamentos e documentação de referência',
-      collapsed: false,
-      items: [
-        'especificacoes-tecnicas/index',
-        'especificacoes-tecnicas/mapeamento-controle-telas',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Procedimentos',
-      description: 'Procedimentos técnicos e metodologias de correção',
-      collapsed: false,
-      items: [
-        'procedimentos/reprogramacao-rmc',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Relatórios Executivos',
-      description: 'Resumos executivos, conclusões e recomendações estratégicas',
-      collapsed: false,
-      items: [
-        'relatorios-executivos/relatorio-final',
-        'relatorios-executivos/consolidado-3-placas',
       ],
     },
   ],

@@ -109,16 +109,16 @@ function TechnicalNavigation() {
               </div>
               <div className="card__body">
                 <p>
-                  Especificações técnicas, mapeamentos e procedimentos de
-                  diagnóstico validados.
+                  Análises comparativas e consolidações técnicas
+                  validadas entre diferentes placas RMC.
                 </p>
               </div>
               <div className="card__footer">
                 <Link
                   className="button button--primary button--block"
-                  to="/especificacoes-tecnicas"
+                  to="/comparativos"
                 >
-                  Ver Especificações
+                  Ver Comparativos
                 </Link>
               </div>
             </div>
