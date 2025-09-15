@@ -164,19 +164,6 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Documentação Técnica',
-          items: [
-            {
-              label: 'Introdução',
-              to: '/intro',
-            },
-            {
-              label: 'Tutorial Básico',
-              to: '/tutorial-basics/create-a-document',
-            },
-          ],
-        },
-        {
           title: 'Eletromidia Hardware',
           items: [
             {
@@ -186,19 +173,6 @@ const config: Config = {
             {
               label: 'Alexandre de Abreu Pereira',
               href: 'mailto:alexandre.abreu@eletromidia.com.br',
-            },
-          ],
-        },
-        {
-          title: 'Recursos',
-          items: [
-            {
-              label: 'Tutorial Extras',
-              to: '/tutorial-extras/manage-docs-versions',
-            },
-            {
-              label: 'Markdown Features',
-              to: '/tutorial-basics/markdown-features',
             },
           ],
         },
