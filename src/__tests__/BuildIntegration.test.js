@@ -298,7 +298,7 @@ describe('Build Integration Tests', () => {
       const docusaurusImages = [
         'static/img/undraw_docusaurus_mountain.svg',
         'static/img/undraw_docusaurus_tree.svg',
-        'static/img/undraw_docusaurus_react.svg',
+        'static/img/rmc-eletromidia.png',
       ];
 
       docusaurusImages.forEach(image => {

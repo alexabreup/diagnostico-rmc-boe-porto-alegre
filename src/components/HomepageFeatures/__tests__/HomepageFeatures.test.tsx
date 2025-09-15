@@ -12,7 +12,7 @@ jest.mock('@site/static/img/undraw_docusaurus_tree.svg', () => ({
   default: 'svg',
 }));
 
-jest.mock('@site/static/img/undraw_docusaurus_react.svg', () => ({
+jest.mock('@site/static/img/rmc-eletromidia.png', () => ({
   default: 'svg',
 }));
 

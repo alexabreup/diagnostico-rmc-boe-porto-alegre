@@ -34,7 +34,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: 'Análises Comparativas',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/rmc-eletromidia.png').default,
     description: (
       <>
         Comparações técnicas entre diferentes placas RMC com dados estatísticos,
