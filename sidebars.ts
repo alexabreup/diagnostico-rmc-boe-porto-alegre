@@ -53,6 +53,15 @@ const sidebars: SidebarsConfig = {
         'problemas-identificados/index',
       ],
     },
+    {
+      type: 'category',
+      label: 'Procedimentos',
+      description: 'Procedimentos técnicos e metodologias de correção para placas RMC',
+      collapsed: false,
+      items: [
+        'procedimentos/reparos-placas-rmc',
+      ],
+    },
   ],
 };
 
