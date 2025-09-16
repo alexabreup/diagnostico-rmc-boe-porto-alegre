@@ -153,17 +153,7 @@ Resumos executivos com conclusões, recomendações e planos de ação.
 
 Diretrizes para implementação da solução em toda a rede de Porto Alegre e prevenção de recorrências.
 
-## Impacto dos Resultados
 
-<MetricsDisplay 
-  title="Métricas de Impacto" 
-  metrics={[
-    { value: '33%', label: 'Placas funcionais (antes)', status: 'crítico' },
-    { value: '100%', label: 'Placas funcionais (após)', status: 'funcional' },
-    { value: '0', label: 'Chamados técnicos (após)', status: 'funcional' },
-    { value: '+200%', label: 'Melhoria de confiabilidade', status: 'funcional' }
-  ]} 
-/>
 
 ## Relevância Estratégica
 
