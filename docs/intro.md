@@ -18,12 +18,12 @@ tools_used:
 ## Visão Geral do Projeto
 
 Este projeto documenta uma análise técnica abrangente das placas RMC (Remote Media Controller)
-baseadas no microcontrolador **GD32F307VET6**. O objetivo principal foi identificar e resolver
+baseadas no microcontrolador **GD32F307VCT6**. O objetivo principal foi identificar e resolver
 problemas relacionados ao sistema de schedule de brilho PWM que afetavam o controle das telas LCD.
 
 ## Contexto Operacional
 
-A **Eletromidia**, empresa especializada em mídia externa digital, opera uma extensa rede de mobiliários urbanos digitais (MUBs) equipados com telões de display LCD na cidade de Porto Alegre, RS. Estes equipamentos utilizam placas RMC (Remote Media Controller) baseadas no microcontrolador **GD32F307VET6** para controle de brilho adaptativo, garantindo visibilidade otimizada e economia energética através de ajustes automáticos de PWM conforme horário e luminosidade ambiente.
+A **Eletromidia**, empresa especializada em mídia externa digital, opera uma extensa rede de mobiliários urbanos digitais (MUBs) equipados com telões de display LCD na cidade de Porto Alegre, RS. Estes equipamentos utilizam placas RMC (Remote Media Controller) baseadas no microcontrolador **GD32F307VCT6** para controle de brilho adaptativo, garantindo visibilidade otimizada e economia energética através de ajustes automáticos de PWM conforme horário e luminosidade ambiente.
 
 ## Problema Relatado
 
@@ -60,7 +60,7 @@ import MetricsDisplay from '@site/src/components/MetricsDisplay';
   title="Especificações do Hardware" 
   headers={['Componente', 'Especificação', 'Status']} 
   data={[
-    ['Microcontrolador', 'GD32F307VET6 (ARM Cortex-M4)', 'funcional'],
+    ['Microcontrolador', 'GD32F307VCT6 (ARM Cortex-M4)', 'funcional'],
     ['Flash Memory', '256KB', 'funcional'],
     ['SRAM', '64KB', 'funcional'],
     ['Aplicação', 'Controle de brilho das telas LCD via PWM', 'funcional']

@@ -50,7 +50,7 @@ Identificamos **três estágios distintos** funcional degradação:
   title="Comparação funcional Hardware"
   headers={['Aspecto', 'RMC 850Y POA', 'RMC funcional-1107', 'RMC funcional-1105']}
   data={[
-    ['MCU', 'GD32F307VET6', 'GD32F307VET6', 'GD32F307VET6'],
+    ['MCU', 'GD32F307VCT6', 'GD32F307VCT6', 'GD32F307VCT6'],
     ['Flash Size', '256KB', '256KB', '256KB'],
     ['status: funcional', 'OK', 'OK', 'OK']
   ]}

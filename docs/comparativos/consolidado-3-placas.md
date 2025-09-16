@@ -50,7 +50,7 @@ Mapeamos o **ciclo funcional degradação** das placas RMC:
   title="Comparação funcional Hardware"
   headers={['Aspecto', 'funcional-1105', 'funcional-1107', '850Y POA']}
   data={[
-    ['MCU', 'GD32F307VET6', 'GD32F307VET6', 'GD32F307VET6'],
+    ['MCU', 'GD32F307VCT6', 'GD32F307VCT6', 'GD32F307VCT6'],
     ['Flash Size', '256KB', '256KB', '256KB'],
     ['status: funcional', 'OK', 'OK', 'OK']
   ]}

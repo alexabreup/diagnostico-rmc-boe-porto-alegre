@@ -121,7 +121,7 @@ component_model: "RMC 850Y"
   title="Especificações Técnicas"
   headers={['Parâmetro', 'Valor', 'Status']}
   data={[
-    ['MCU', 'GD32F307VET6', 'Funcional'],
+    ['MCU', 'GD32F307VCT6', 'Funcional'],
     ['Flash', '256KB', 'Funcional'],
     ['SRAM', '64KB', 'Funcional']
   ]}

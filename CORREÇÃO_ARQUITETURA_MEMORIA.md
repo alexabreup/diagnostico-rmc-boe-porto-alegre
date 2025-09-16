@@ -8,11 +8,11 @@
 
 ## Problema Identificado
 
-Durante a revisão da documentação técnica, foram encontradas referências incorretas ao **EEPROM** como tipo de memória utilizada pelo microcontrolador GD32F307VET6. Esta informação estava incorreta conforme o datasheet oficial.
+Durante a revisão da documentação técnica, foram encontradas referências incorretas ao **EEPROM** como tipo de memória utilizada pelo microcontrolador GD32F307VCT6. Esta informação estava incorreta conforme o datasheet oficial.
 
 ## Correção Aplicada
 
-### Arquitetura Real do GD32F307VET6
+### Arquitetura Real do GD32F307VCT6
 
 Conforme o **GD32F307xx Datasheet Rev3.0, Seção 3.2 (On-chip memory)**, o microcontrolador utiliza:
 
@@ -84,4 +84,4 @@ A correção foi validada contra:
 
 ## Conclusão
 
-A documentação técnica agora reflete corretamente a arquitetura de memória do GD32F307VET6, eliminando referências incorretas ao EEPROM e fornecendo informações precisas sobre Flash Memory (1024KB) e SRAM (96KB) conforme especificação do fabricante.
+A documentação técnica agora reflete corretamente a arquitetura de memória do GD32F307VCT6, eliminando referências incorretas ao EEPROM e fornecendo informações precisas sobre Flash Memory (1024KB) e SRAM (96KB) conforme especificação do fabricante.

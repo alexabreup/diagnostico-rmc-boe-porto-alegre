@@ -36,7 +36,7 @@ A placa RMC funcional-1107 apresenta **degradação inicial** funcional sistema 
   title="Especificações funcional Hardware"
   headers={['Parâmetro', 'Valor', 'Status']}
   data={[
-    ['MCU', 'GD32F307VET6 (compatível STM32F1xx_CL)', 'funcional'],
+    ['MCU', 'GD32F307VCT6 (compatível STM32F1xx_CL)', 'funcional'],
     ['Chip ID', '0x418', 'funcional'],
     ['Flash Total', '256KB (262,144 bytes)', 'funcional'],
     ['SRAM', '64KB (65,536 bytes)', 'funcional'],
