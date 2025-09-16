@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Diagnóstico RMC - Plataforma Técnica',
   tagline: 'Documentação Técnica de Hardware - Eletromidia',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon-doc.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
