@@ -127,6 +127,9 @@ bundle-analysis-report.json
 *-analysis-report.json
 *-build-report.json
 
+# Internal development folders - PRIVATE ONLY
+.internal/
+
 # Pattern for future internal docs - PRIVATE ONLY
 *_SUMMARY.md
 *_FIX.md
