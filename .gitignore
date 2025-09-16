@@ -103,7 +103,7 @@ temp/
 # Local development
 .env.development
 
-# Internal documentation files (development notes)
+# Internal documentation files (development notes) - PRIVATE ONLY
 AJUSTE_TAMANHO_LOGO.md
 ATUALIZAÇÃO_LOGO.md
 CONTENT_VALIDATION_FIX_SUMMARY.md
@@ -122,8 +122,20 @@ NETLIFY_DEPLOY_SUCCESS.md
 TEST_SUMMARY.md
 VALIDATION.md
 
-# Pattern for future internal docs
+# Analysis and build reports - PRIVATE ONLY
+bundle-analysis-report.json
+*-analysis-report.json
+*-build-report.json
+
+# Pattern for future internal docs - PRIVATE ONLY
 *_SUMMARY.md
 *_FIX.md
 *_REPORT.md
+*_CORREÇÃO*.md
+*_DEPLOY*.md
+*_VALIDATION*.md
 INSTRUÇÕES_*.md
+AJUSTE_*.md
+ATUALIZAÇÃO_*.md
+DESENVOLVIMENTO_*.md
+LIMPEZA_*.md
